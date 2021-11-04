@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
+  axios.post(` https://2iz0fgkywi.execute-api.ap-southeast-2.amazonaws.com/prod/ride`)
+  .then(res => {
+    console.log(res);
+    console.log(res.data);
+  })
   return (
     <div className="App">
       <header className="App-header">
